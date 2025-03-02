@@ -1,88 +1,108 @@
-/* General Styles */
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+/* Container for centering content */
+.container {
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+/* Headings */
+h1, h2, h3 {
+    margin-top: 0; /* Remove default top margin */
 }
 
-header p {
-    margin: 5px 0 0;
-    font-size: 1.2rem;
+/* Links */
+a {
+    color: #007BFF; /* Blue link color */
+    text-decoration: none; /* Remove underline */
 }
 
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Navigation Menu */
 nav {
-    background: #444;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #333; /* Dark background */
+    padding: 10px 0; /* Add padding */
+    position: sticky; /* Make the nav bar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the menu items */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block; /* Display items in a line */
+    margin: 0 15px; /* Add spacing between items */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
+    color: #fff; /* White text */
+    font-size: 1.1rem; /* Slightly larger font */
+    padding: 5px 10px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s ease; /* Smooth hover effect */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #007BFF; /* Blue background on hover */
+    text-decoration: none; /* Remove underline */
 }
 
+/* Logo */
+.logo {
+    float: left; /* Float the logo to the left */
+    margin: 0 20px; /* Add some spacing */
+}
+
+.logo a {
+    font-size: 1.5rem; /* Larger font for the logo */
+    font-weight: bold; /* Make it bold */
+    color: #fff; /* White text */
+}
+
+/* Sections */
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* White background */
+    padding: 20px; /* Add padding */
+    margin: 20px 0; /* Add spacing between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
+/* Footer */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add padding */
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    margin-top: 20px; /* Add spacing */
 }
 
-nav ul li a {
-    padding: 5px 10px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack items vertically */
+        margin: 10px 0; /* Add spacing between items */
+    }
 
-nav ul li a:hover {
-    background: #333;
-    color: #fff;
+    .logo {
+        float: none; /* Center the logo */
+        text-align: center;
+    }
 }
