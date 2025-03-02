@@ -1,108 +1,104 @@
-/* Base Styles */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif; /* Use a clean, readable font */
-    line-height: 1.6; /* Improve readability */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark gray text */
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container for centering content */
-.container {
-    max-width: 1200px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add some padding */
+/* Canvas para el laberinto */
+#mazeCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
-/* Headings */
-h1, h2, h3 {
-    margin-top: 0; /* Remove default top margin */
-}
-
-/* Links */
-a {
-    color: #007BFF; /* Blue link color */
-    text-decoration: none; /* Remove underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-/* Navigation Menu */
+/* Navegación */
 nav {
-    background-color: #333; /* Dark background */
-    padding: 10px 0; /* Add padding */
-    position: sticky; /* Make the nav bar sticky */
-    top: 0; /* Stick to the top */
-    z-index: 1000; /* Ensure it stays above other content */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 nav ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    text-align: center; /* Center the menu items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block; /* Display items in a line */
-    margin: 0 15px; /* Add spacing between items */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff; /* White text */
-    font-size: 1.1rem; /* Slightly larger font */
-    padding: 5px 10px; /* Add padding */
-    border-radius: 5px; /* Rounded corners */
-    transition: background 0.3s ease; /* Smooth hover effect */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #007BFF; /* Blue background on hover */
-    text-decoration: none; /* Remove underline */
+    background-color: #007BFF;
 }
 
-/* Logo */
-.logo {
-    float: left; /* Float the logo to the left */
-    margin: 0 20px; /* Add some spacing */
+/* Contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.logo a {
-    font-size: 1.5rem; /* Larger font for the logo */
-    font-weight: bold; /* Make it bold */
-    color: #fff; /* White text */
-}
-
-/* Sections */
+/* Secciones con efecto parallax */
 section {
-    background-color: #fff; /* White background */
-    padding: 20px; /* Add padding */
-    margin: 20px 0; /* Add spacing between sections */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 50px 0;
+    transition: transform 0.3s ease-out;
+    backdrop-filter: blur(10px);
 }
 
 /* Footer */
 footer {
-    text-align: center; /* Center the text */
-    padding: 10px 0; /* Add padding */
-    background-color: #333; /* Dark background */
-    color: #fff; /* White text */
-    margin-top: 20px; /* Add spacing */
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Responsivo */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block; /* Stack items vertically */
-        margin: 10px 0; /* Add spacing between items */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .logo {
-        float: none; /* Center the logo */
-        text-align: center;
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
     }
 }
